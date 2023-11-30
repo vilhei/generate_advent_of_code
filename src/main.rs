@@ -14,7 +14,7 @@ fn main() {
     let mut advent_location = bin_parent_location.join("advent");
     let mut inputs_location = bin_parent_location.join("inputs");
 
-    let days = 24;
+    let days = 25;
 
     for day in 1..=days {
         advent_location.push(format!("day{day}.rs"));
