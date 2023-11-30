@@ -45,11 +45,13 @@ fn generate_file_content(day: u32) -> String {
 pub struct Day{day};
 
 impl Task for Day{day} {{
-    fn task_part_one(&self, _input_file: &str) -> Result<String, TaskError> {{
+    fn task_part_one(&self, input_file: &str) -> Result<String, TaskError> {{
+        let file_content = read_task_input_file(input_file)?;
         Err(TaskError::NotImplemented(1))
     }}
 
-    fn task_part_two(&self, _input_file: &str) -> Result<String, TaskError> {{
+    fn task_part_two(&self, input_file: &str) -> Result<String, TaskError> {{
+        let file_content = read_task_input_file(input_file)?;
         Err(TaskError::NotImplemented(2))
     }}
 }}
