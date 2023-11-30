@@ -4,6 +4,13 @@ fn main() {
         std::env::current_exe().expect("Failed to read path of the binary");
     bin_parent_location.pop();
     bin_parent_location.pop();
+
+    let dir_res = fs::create_dir(bin_parent_location.join("inputs"));
+    match dir_res {
+        Ok(_) => (),
+        Err(e) => eprintln!("Failed to create inputs directory \nNOTE! if the inputs directory already exists ignore this\n -- reason :\n{:?}",e),
+    }
+
     let mut advent_location = bin_parent_location.join("advent");
     let mut inputs_location = bin_parent_location.join("inputs");
 
